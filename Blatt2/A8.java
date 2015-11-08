@@ -1,15 +1,30 @@
 public class A8 {
 	public static void main(String args[]) {
 		double w = 0;
-		while (w <= 0) {
-			System.out.print("Breite des Hauses eingeben (> 0): ");
+		String symbol = "#";
+
+		while (w < 20) {
+			System.out.print("Breite des Hauses eingeben (>= 20): ");
 			w = Integer.parseInt(System.console().readLine());
+		}
+
+		System.out.println("Welches Zeichen zum Zeichnen?");
+		System.out.println("1: Plus (+)");
+		System.out.println("2: Stern (*)");
+		System.out.println("3: Herz (\u2665)");
+		System.out.print("Ihre Eingabe: ");
+
+		switch (Integer.parseInt(System.console().readLine())) {
+		case 1: symbol = "+"; break;
+		case 2: symbol = "*"; break;
+		case 3: symbol = "\u2665"; break;
+		default: break;
 		}
 
 		for (double i = 0; i < w; i++) {
 			for (double j = 0; j < w; j++) {
 				if (inHaus(j, i, w))
-					System.out.print("#");
+					System.out.print(symbol);
 				else
 					System.out.print(" ");
 				System.out.print(" ");
