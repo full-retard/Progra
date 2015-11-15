@@ -1,6 +1,9 @@
-public class A5 {
+public class Palindrom {
 	static boolean is_palindrom(String s) {
-		return s.equals(new StringBuilder(s).reverse().toString());
+		String umgekehrt = "";
+		for (int i = 0; i < s.length(); i++)
+			umgekehrt = s.charAt(i) + umgekehrt;
+		return s.equals(umgekehrt);
 	}
 
 	public static void main(String[] args){

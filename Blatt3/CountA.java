@@ -1,9 +1,8 @@
-public class A4 {
+public class CountA {
 	static int count_a(String s) {
 		int as = 0;
-		for (int i = 0; i < s.length(); i++) 
-			if (s.charAt(i) == 'a')
-				as++;
+		for (int i = 0; i < s.length(); i++)
+			if (s.charAt(i) == 'a') as++;
 		return as;
 	}
 
