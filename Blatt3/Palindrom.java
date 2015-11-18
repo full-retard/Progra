@@ -1,9 +1,9 @@
 public class Palindrom {
 	static boolean is_palindrom(String s) {
-		String umgekehrt = "";
-		for (int i = 0; i < s.length(); i++)
-			umgekehrt = s.charAt(i) + umgekehrt;
-		return s.equals(umgekehrt);
+		int i = s.length(), e = i - 1;
+		for (int b = 0; b < (i/2); b++, e--)
+			if (s.charAt(e) != s.charAt(b)) return false;
+		return true;
 	}
 
 	public static void main(String[] args){
