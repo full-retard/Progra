@@ -1,5 +1,5 @@
 public class Geheim {
-	public static char[][] nachricht;
+	public char[][] nachricht;
 
 	void input() {
 		int count = 0;
